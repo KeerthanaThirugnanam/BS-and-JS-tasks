@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 7</title>
+
+    <style>
+        #train {
+          width: 400px;
+          animation: move 2s infinite;
+          animation-play-state: paused;
+        }
+        
+        p{
+            color: blue;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+        }
+        .btn{
+            text-align: center;
+        }
+      </style>
+
+</head>
+<body>
+    <img id="train" src="./images/train.gif">
+    <p>Click the following buttons to handle animation</p>
+    <div class="btn">
+        <button type="button" onclick="start()" id="start">Start</button>
+        <button type="button" onclick="stop()" id="stop">Stop</button>
+    </div>
+
+  <script>
+    start.onclick = function() {
+      let start = Date.now();
+
+      let timer = setInterval(function() {
+        let timePassed = Date.now() - start;
+
+        train.style.left = timePassed / 5 + 'px';
+
+        if (timePassed > 2000) clearInterval(timer);
+
+      }, 20);
+    }
+  </script>
+</body>
+</html>

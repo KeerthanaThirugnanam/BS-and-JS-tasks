@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 4</title>
+</head>
+<body>
+    <input type="button" onclick="showDate()" value="Show date" id="">
+    <p id="date"></p> <br>
+    <input type="button" onclick="showtime()" value="Show time" name="" id="">
+    <p id="time"></p>
+
+    <script>
+        function showDate(){
+             const date =new Date();
+             var showdate = date.getDate()+"/"+date.toLocaleString('default',{month:'long'})+"/"+date.getFullYear();
+             document.getElementById("date").innerHTML=showdate;
+         }
+
+        function showtime(){
+            const time=new Date();
+        document.getElementById("time").innerHTML =time;
+        }
+    </script>
+</body>
+</html>

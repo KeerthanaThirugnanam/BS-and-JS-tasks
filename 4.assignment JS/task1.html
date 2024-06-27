@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 1</title>
+</head>
+<body>
+    <script>
+      function reverse(x) {
+        let output = 0;
+        while (x !== 0) {
+          output = output * 10 + x % 10;
+          x = Math.floor(x / 10);
+        }
+        return output;
+      }
+      const x = 322456;
+      console.log("Input : "+ x);
+      const result = reverse(x);
+      console.log("Output(Reversed number) : "+result);
+
+
+  </script>
+    
+</body>
+</html>
