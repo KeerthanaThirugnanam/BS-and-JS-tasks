@@ -44,9 +44,10 @@
         }
         label {
           display: inline-block;
-          width: 250px;
-          text-align: right;
+          width: 200px;
+          text-align: center;
           font-size: large;
+          margin-right: 10px;
         }​
         
         .input-group{
@@ -73,14 +74,28 @@
             color:rgb(242, 18, 18);
             font-size:16px;
         }
-        .checkbox{
-            margin-left: 60px;
-        }
         
-        .url{
-            text-align: right;
-            margin-right: 20px;
-        }
+input{
+    width: 100%;
+    padding-left: 10px;
+    border: 2px solid rgb(177, 176, 176);
+    
+    
+}
+.input-group{
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+  margin-bottom: 30px;
+}
+i{
+    width: 40px;
+    padding: 8px;
+    background-color: #e6e6e6;
+    text-align: center;
+} 
+
+
                 
             </style>
 
@@ -97,76 +112,67 @@
                 <div class="input-group">
                     <label for="fname">First Name</label>
                     <i class="icon bi bi-person-fill"></i>
-                    <input type="text" id="fname" name="fname">
+                    <input type="text" id="fname" name="fname" placeholder="First Name">
                     <div class="error"></div>
                 </div>
-                <div class="col-md-12">
-                    <label for="validationServerName" class="form-label">Name</label>
-                      <input type="text" class="form-control is-invalid" id="validationServeNname" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
-                      <div id="validationServerNameFeedback" class="invalid-feedback">
-                        Name is required
-                      </div>
+                
                 <div class="input-group">
                     <label for="fname">Last name</label>
+                    <i class="icon bi bi-person-fill"></i>
                     <input type="text" id="lname" name="lname" placeholder="Last Name">
                     <div class="error"></div>
                 </div>
                 <div class="input-group">
-                    <i class="bi bi-person-fill"></i>
-                    <input type="text" placeholder="Username" id="name"/>
-                    <div class="error"></div>
-                </div>
-        
-                <div class="input-group">
-                    <i class="bi bi-lock-fill"></i>
-                    <input type="password" placeholder="Password" id="password"/>
-                    <div class="error"></div>
-                </div>
-                <div class="input-group">
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" >
+                    <i class="bi bi-envelope"></i>
+                    <input type="text" id="email" name="email" placeholder="E-mail Address">
                     <div class="error"></div>
                 </div>
                 <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <label>Phone #</label>
+                    <i class="bi bi-telephone-fill"></i>
+                    <input type="tel" placeholder="(123)456-7890" id="phno"/>
+                    <div class="error"></div>
+                </div>
+                
+                <div class="input-group">
+                    <label>Address</label>
+                    <i class="bi bi-house-door-fill"></i>
+                    <input type="text" id="address" placeholder="address">
                     <div class="error"></div>
                 </div>
                 <div class="input-group">
-                    <label for="re_password">Re-enter Password</label>
-                    <input type="password" id="re_password" name="re_password">
+                    <label>City</label>
+                    <i class="bi bi-house-door-fill"></i>
+                    <input type="text" id="city" placeholder="city">
                     <div class="error"></div>
                 </div>
-                <div class="input-group">
-                    <label for="Gender">Gender</label>
-                    <input type="radio" name="Gender" >Male 
-                    <input type="radio" name="Gender" >Female <br>
-                </div>
-                <div class="input-group">
-                    <label for="phno">Phone Number</label>
-                    <input type="tel" id="phno" name="Phno" >
-                </div>
-                <div class="input-group">
-                    <label for="add">Address</label>
-                    <input type="text" id="add" name="add" >
-                </div>
+                
                 <div class="input-group">
                     <label for="state">State</label>
-                    <input type="text" id="state" name="state" >
+                    <i class="bi bi-list"></i>
+                    <input type="text" id="state" placeholder="state" >
                 </div>
                 <div class="input-group">
-                    <label for="country">Country</label>
-                    <select name="country" id="country" required>
-                        <option value="select">Choose your country</option>
-                        <option value="India">India</option>
-                        <option value="sriLanka">Sri Lanka</option>
-                        <option value="Pakistan">Pakistan</option>
+                    <label>State</label>
+                    <select name="State" id="State" required>
+                        <option value="select"> Please select your country</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Andhra pradhesh">Andhra pradhesh</option>
                     </select>
                 </div>
-                <
-                <div id="submit" class="btn content-justify center" >
-                    <button type="submit" >Register</button>
+                <div class="input-group">
+                    <label>Do you have hosting</label>
+                    <input type="radio" name="hosting" >Yes
+                    <input type="radio" name="hosting" >No <br>
                 </div>
+                <div class="input-group">
+                    <label>Project Discription</label>
+                    <i class="bi bi-pencil"></i>
+                    <input type="text" id="dis" placeholder="Project Discription" >
+                </div>
+                <button type="button" class="btn btn-danger ">Register</button>
     
                 
     
@@ -174,33 +180,5 @@
             </form>
         </div>
 
-        <div class="input-group">
-            <i class="bi bi-person-fill"></i>
-            <input type="text" placeholder="Username" id="name"/>
-            <div class="error"></div>
-        </div>
-        
-
-        <div class="input-group">
-            <i class="bi bi-lock-fill"></i>
-            <input type="password" placeholder="Password" id="password"/>
-            <div class="error"></div>
-        </div>
-
-        <input type="button" value="Log in" class="btn" id="submit"/>
-    
-    </div>
-
-    
-    <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupSelect01">Options</label>
-        <select class="form-select" id="inputGroupSelect01">
-          <option selected>Choose...</option>
-          <option value="1">One</option>
-          <option value="2">Two</option>
-          <option value="3">Three</option>
-        </select>
-      </div>
-    
 </body>
 </html>
